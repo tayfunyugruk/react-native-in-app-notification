@@ -68,7 +68,7 @@ class DefaultNotificationBody extends React.Component {
 
   componentDidUpdate(prevProps) {
     if (this.props.isOpen !== prevProps.isOpen) {
-      StatusBar.setHidden(this.props.isOpen);
+      // StatusBar.setHidden(this.props.isOpen);
     }
   }
 
@@ -117,7 +117,7 @@ class DefaultNotificationBody extends React.Component {
           <TouchableOpacity
             style={styles.content}
             activeOpacity={0.3}
-            underlayColor="#050505"
+            underlayColor="transparent"
             onPress={this.onNotificationPress}
           >
             {this.renderIcon()}
