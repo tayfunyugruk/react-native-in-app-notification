@@ -14,10 +14,12 @@ const styles = {
     bottom: 0,
     left: 0,
     right: 0,
+    backgroundColor: '#050505',
   },
   content: {
     flex: 1,
     flexDirection: 'row',
+    backgroundColor: '#050505',
   },
   iconApp: {
     marginTop: 10,
@@ -68,10 +70,6 @@ class DefaultNotificationBody extends React.Component {
     if (this.props.isOpen !== prevProps.isOpen) {
       StatusBar.setHidden(this.props.isOpen);
     }
-
-    if ((prevProps.vibrate || this.props.vibrate) && this.props.isOpen && !prevProps.isOpen) {
-      Vibration.vibrate();
-    }
   }
 
   onNotificationPress() {
@@ -119,7 +117,7 @@ class DefaultNotificationBody extends React.Component {
           <TouchableOpacity
             style={styles.content}
             activeOpacity={0.3}
-            underlayColor="transparent"
+            underlayColor="#050505"
             onPress={this.onNotificationPress}
           >
             {this.renderIcon()}
