@@ -84,7 +84,7 @@ class DefaultNotificationBody extends React.Component {
 
   onSwipe(direction) {
     const { SWIPE_UP } = swipeDirections;
-    
+
     console.log("DefaultNotificationBody onSwipe", direction);
 
     if (direction === SWIPE_UP) {
@@ -119,7 +119,7 @@ class DefaultNotificationBody extends React.Component {
           <TouchableOpacity
             style={styles.content}
             activeOpacity={0.3}
-            underlayColor="transparent"
+            underlayColor="#050505"
             onPress={this.onNotificationPress}
           >
             {this.renderIcon()}
