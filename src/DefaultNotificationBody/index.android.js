@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { TouchableOpacity, StatusBar, View, Text, Image, Vibration } from 'react-native';
-import { getStatusBarHeight, isIphoneX } from 'react-native-iphone-x-helper';
 import GestureRecognizer, { swipeDirections } from 'react-native-swipe-gestures';
 
 const styles = {
@@ -11,7 +10,7 @@ const styles = {
   },
   container: {
     position: 'absolute',
-    top: isIphoneX() && getStatusBarHeight(),
+    top: 0,
     bottom: 0,
     left: 0,
     right: 0,
